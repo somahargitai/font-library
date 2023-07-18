@@ -5,10 +5,10 @@ This is a simple tool to create a font library from your font files. The script 
 ## Installation
 
 ```bash
-    npm install
+npm install
 ```
 
-If you are on a M1 Mac you need to install the following packages:
+If you are on a M1/M2 Mac you may experience errors. You can resolve them by installing the following packages:
 
 ```bash
 arch -arm64 brew install pkg-config cairo pango libpng jpeg giflib librsvg
@@ -19,5 +19,5 @@ arch -arm64 brew install pkg-config cairo pango libpng jpeg giflib librsvg
 Put the font files into the `fonts` folder and run the script:
 
 ```bash
-    node index.js
+node index.js
 ```
