@@ -30,7 +30,7 @@ fs.readdir(fontFolderPath, async (err, files) => {
       registerFont(fontPath, { family: `${fontNameWithoutExt}` });
 
       try {
-        const canvas = createCanvas(5000, 2000);
+        const canvas = createCanvas(7500, 2000);
         const context = canvas.getContext("2d");
 
         context.fillStyle = backgroundColor;
@@ -41,13 +41,13 @@ fs.readdir(fontFolderPath, async (err, files) => {
         // context.font = "400px CustomFont";
 
         context.font = "1000px " + fontNameWithoutExt;
-        context.fillText(givenString, 50, 1000);
+        context.fillText(givenString, 100, 1000);
 
-        context.font = "100px " + fontNameWithoutExt;
-        context.fillText(alphabetString, 50, 1400);
-        context.fillText(allCapsString, 50, 1500);
-        context.fillText(numbersString, 50, 1600);
-        context.fillText(specialCharsString, 50, 1700);
+        context.font = "200px " + fontNameWithoutExt;
+        context.fillText(alphabetString,     100, 1500);
+        context.fillText(allCapsString,      3000, 1500);
+        context.fillText(numbersString,      100, 1700);
+        context.fillText(specialCharsString, 3000, 1700);
 
         const imageBuffer = canvas.toBuffer("image/jpeg");
         const outputFilePath =
